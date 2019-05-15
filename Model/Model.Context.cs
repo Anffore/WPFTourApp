@@ -13,10 +13,10 @@ namespace WPFTourApp.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TourDatabase : DbContext
+    public partial class TourDatabaseContext : DbContext
     {
-        public TourDatabase()
-            : base("name=TourDatabase")
+        public TourDatabaseContext()
+            : base("name=TourDatabaseContext")
         {
         }
     
@@ -25,7 +25,7 @@ namespace WPFTourApp.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Basket> Basket { get; set; }
-        public virtual DbSet<Tour> Tour { get; set; }
+        public virtual DbSet<Basket> Baskets { get; set; }
+        public virtual DbSet<Tour> Tours { get; set; }
     }
 }

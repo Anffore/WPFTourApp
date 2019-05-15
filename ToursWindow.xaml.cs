@@ -11,7 +11,7 @@ namespace WPFTourApp
     /// </summary>
     public partial class ToursWindow : Window
     {
-        TourDatabase db = new TourDatabase();
+        TourDatabaseContext db = new TourDatabaseContext();
 
         public ToursWindow()
         {
@@ -40,8 +40,11 @@ namespace WPFTourApp
             basket.Price = selectedTour.Price;
             basket.Count = Convert.ToInt32(CountBox.Text);
 
-            db.Basket.Add(basket);
+            db.Baskets.Add(basket);
             db.SaveChanges();
+
+            BasketWindow basketWindow = new BasketWindow();
+            basketWindow.Show();
         }
     }
 }

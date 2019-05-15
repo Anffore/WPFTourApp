@@ -26,7 +26,7 @@
                     <DataGrid x:Name="dataGridBasket"></DataGrid>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Orientation="Horizontal">
-                    <Button Margin="10" Padding="10,0,10,0" Height="30" FontSize="14" Foreground="White" Background="#FF465574">Удалить из корзины</Button>
+                    <Button Margin="10" Padding="10,0,10,0" Height="30" FontSize="14" Foreground="White" Background="#FF465574" Click="DeleteFromBasket">Удалить из корзины</Button>
                 </StackPanel>
             </Grid>
         </Border>

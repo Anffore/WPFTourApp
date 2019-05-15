@@ -10,7 +10,7 @@ namespace WPFTourApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        TourDatabase db = new TourDatabase();     
+        TourDatabaseContext db = new TourDatabaseContext();     
 
         public MainWindow()
         {
@@ -19,7 +19,7 @@ namespace WPFTourApp
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            var tours = db.Tour.Where(t => t.From == fromTxt.Text)
+            var tours = db.Tours.Where(t => t.From == fromTxt.Text)
                                 .Where(t => t.Where == whereTxt.Text)
                                 .Where(t => t.TripDate == calTxt.SelectedDate);
 

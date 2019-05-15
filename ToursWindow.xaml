@@ -21,7 +21,7 @@
             <Button Style="{StaticResource ImageButtonStyle}" Click="HomeButton_Click">
                 <Image Source="Icons/Home.png" Height="32" HorizontalAlignment="Right" Margin="0,0,10,0"/>
             </Button>
-            <Button Style="{StaticResource ImageButtonStyle}" Click="AddToBasket_Click">
+            <Button Style="{StaticResource ImageButtonStyle}" Click="BasketButton_Click">
                 <Image Source="Icons/basket.png" Height="32" HorizontalAlignment="Right" Margin="0,0,50,0"/>
             </Button>
             <StackPanel Grid.Row="1">

@@ -19,16 +19,17 @@ namespace WPFTourApp
     /// </summary>
     public partial class BasketWindow : Window
     {
-        TourDatabase db = new TourDatabase();
+        TourDatabaseContext db = new TourDatabaseContext();
 
         public BasketWindow()
         {
             InitializeComponent();
+            dataGridBasket.ItemsSource = db.Baskets.ToList<Basket>();
         }
 
         private void BasketWindow_Load(object sender, RoutedEventArgs e)
         {
-            dataGridBasket.ItemsSource = db.Basket.ToList();
+            
         }
 
 
@@ -38,5 +39,18 @@ namespace WPFTourApp
 
         }
 
+        private void DeleteFromBasket(object sender, RoutedEventArgs e)
+        {
+            //Выбираем объект в строке
+            Basket selectedBasket = dataGridBasket.SelectedItem as Basket;
+            //Присваиваем объекту ID выбранного элемента
+            Basket basket = db.Baskets.Find(selectedBasket.Id);
+            //Удаляем его
+            db.Baskets.Remove(basket);
+            db.SaveChanges();
+
+            //Показываем обновленные данные
+            dataGridBasket.ItemsSource = db.Baskets.ToList();
+        }
     }       
 }
