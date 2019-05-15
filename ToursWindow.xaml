@@ -21,11 +21,17 @@
             <Button Style="{StaticResource ImageButtonStyle}" Click="HomeButton_Click">
                 <Image Source="Icons/Home.png" Height="32" HorizontalAlignment="Right" Margin="0,0,10,0"/>
             </Button>
+            <Button Style="{StaticResource ImageButtonStyle}" Click="AddToBasket_Click">
+                <Image Source="Icons/basket.png" Height="32" HorizontalAlignment="Right" Margin="0,0,50,0"/>
+            </Button>
             <StackPanel Grid.Row="1">
-                <DataGrid x:Name="dataGridTour"></DataGrid>
+                <DataGrid x:Name="dataGridTour">
+                </DataGrid>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal">
-                <Button Margin="10" Padding="10,0,10,0" Height="30" FontSize="14" Foreground="White" Background="#FF465574">Добавить в корзину</Button>
+                <TextBox Width="50" Margin="10" x:Name="CountBox">1</TextBox>
+                <TextBlock VerticalAlignment="Center">Количество</TextBlock>
+                <Button Margin="10" Padding="10,0,10,0" Height="30" FontSize="14" Foreground="White" Background="#FF465574" Click="AddToBasket_Click">Добавить в корзину</Button>
             </StackPanel>
         </Grid>
     </Border>

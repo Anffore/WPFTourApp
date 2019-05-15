@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFTourApp.BasketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTourApp"
+        mc:Ignorable="d"
+        Title="BasketWindow" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF465574">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles/MainStyle.xaml" />
+    </Window.Resources>
+    
+    <Grid>
+        <Border Background="White" Margin="20" CornerRadius="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" FontSize="20" Margin="10">Корзина</TextBlock>
+                <Button Style="{StaticResource ImageButtonStyle}" Click="HomeButton_Click">
+                    <Image Source="Icons/Home.png" Height="32" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+                </Button>
+                <StackPanel Grid.Row="1">
+                    <DataGrid x:Name="dataGridBasket"></DataGrid>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal">
+                    <Button Margin="10" Padding="10,0,10,0" Height="30" FontSize="14" Foreground="White" Background="#FF465574">Удалить из корзины</Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

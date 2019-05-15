@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using WPFTourApp.Model;
 
 namespace WPFTourApp
 {
@@ -18,6 +11,8 @@ namespace WPFTourApp
     /// </summary>
     public partial class ToursWindow : Window
     {
+        TourDatabase db = new TourDatabase();
+
         public ToursWindow()
         {
             InitializeComponent();
@@ -27,6 +22,26 @@ namespace WPFTourApp
         {
             this.Close();
 
+        }
+
+        private void BasketButton_Click(object sender, RoutedEventArgs e)
+        {
+            BasketWindow basketWindow = new BasketWindow();
+            this.Close();
+            basketWindow.ShowDialog();
+        }
+
+        private void AddToBasket_Click(object sender, RoutedEventArgs e)
+        {
+            Tour selectedTour = dataGridTour.SelectedItem as Tour;
+
+            Basket basket = new Basket();
+            basket.TovarId = selectedTour.Id;
+            basket.Price = selectedTour.Price;
+            basket.Count = Convert.ToInt32(CountBox.Text);
+
+            db.Basket.Add(basket);
+            db.SaveChanges();
         }
     }
 }

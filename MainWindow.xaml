@@ -19,9 +19,9 @@
                 </Button>
                 <TextBlock Foreground="#FF465574" TextAlignment="Center" Margin="0,50,0,0" FontSize="32">Автобусы</TextBlock>
                 <TextBlock Foreground="#FF465574" Margin="10,30,10,0" FontSize="18">Откуда</TextBlock>
-                <TextBox x:Name="fromTxt" Foreground="#FF465574" Margin="10,10,10,0" Height="30" FontSize="18"></TextBox>
+                <TextBox x:Name="fromTxt" Foreground="#FF465574" Margin="10,10,10,0" Height="30" FontSize="18">Москва</TextBox>
                 <TextBlock Foreground="#FF465574" Margin="10,30,10,0" FontSize="18">Куда</TextBlock>
-                <TextBox x:Name="whereTxt" Foreground="#FF465574" Margin="10,10,10,0" Height="30" FontSize="18"></TextBox>
+                <TextBox x:Name="whereTxt" Foreground="#FF465574" Margin="10,10,10,0" Height="30" FontSize="18">Санкт-Петербург</TextBox>
                 <TextBlock Foreground="#FF465574" Margin="10,30,10,0" FontSize="18">Дата поездки</TextBlock>
                 <Calendar x:Name="calTxt" HorizontalAlignment="left" Margin="10,10,10,0"/>
                 <Button Height="50" Margin="10,30,10,0" FontSize="18" Background="#FF465574" Foreground="White" Click="Search_Click">Подобрать</Button>
