@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPFTourApp.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTourApp"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="450" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid Background="#FF465574">
+        <Border Background="White" Margin="20" CornerRadius="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Grid.Row="0" Width="200">
+                    <TextBlock x:Name="UserName" Margin="20, 10, 20, 0" HorizontalAlignment="Center">UserName</TextBlock>
+                    <TextBlock x:Name="UserLastName" Margin="20, 5, 20, 0" HorizontalAlignment="Center">UserlastName</TextBlock>
+                    <TextBlock x:Name="UserRole" Margin="20,5,20,10" HorizontalAlignment="Center">Role</TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="0" Grid.Row="1">
+                    <Button Margin="20, 10, 20, 10" Height="30" FontSize="16" Background="#FF465574" Foreground="White">Все туры</Button>
+                    <Button Margin="20, 10, 20, 10" Height="30" FontSize="16" Background="#FF465574" Foreground="White" Click="SearchTour_Click">Подобрать</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <Button Style="{StaticResource ImageButtonStyle}" Click="ExitButton_Click">
+                        <Image Source="Icons/Exit.png" Height="32" HorizontalAlignment="Right"/>
+                    </Button>
+                </StackPanel>
+                
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

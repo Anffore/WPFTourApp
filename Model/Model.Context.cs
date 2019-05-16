@@ -27,5 +27,6 @@ namespace WPFTourApp.Model
     
         public virtual DbSet<Basket> Baskets { get; set; }
         public virtual DbSet<Tour> Tours { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

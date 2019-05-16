@@ -33,16 +33,20 @@ namespace WPFTourApp
 
         private void AddToBasket_Click(object sender, RoutedEventArgs e)
         {
+            //получаем выбранный элемент в DataGrid типа Tour
             Tour selectedTour = dataGridTour.SelectedItem as Tour;
 
-            Basket basket = new Basket();
+            //Создаем корзину и пихаем в неё значения из DataGrid
+            Basket basket = new Basket(); 
             basket.TovarId = selectedTour.Id;
             basket.Price = selectedTour.Price;
             basket.Count = Convert.ToInt32(CountBox.Text);
 
+            //Добавляем её в таблицу Basket
             db.Baskets.Add(basket);
             db.SaveChanges();
 
+            //Отображаем окно корзины
             BasketWindow basketWindow = new BasketWindow();
             basketWindow.Show();
         }

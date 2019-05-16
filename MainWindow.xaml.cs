@@ -37,10 +37,12 @@ namespace WPFTourApp
             }
         }
 
-        //Завершить работу приложения
+        //Вернуться в DashBoard
         private void ImageButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Hide();
+            Dashboard mainDashboard = new Dashboard();
+            mainDashboard.ShowDialog();
         }
     }
 }

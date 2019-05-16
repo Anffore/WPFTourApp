@@ -80,6 +80,12 @@
     <Compile Include="BasketWindow.xaml.cs">
       <DependentUpon>BasketWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Basket.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -101,10 +107,21 @@
     <Compile Include="Model\Tour.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="ToursWindow.xaml.cs">
       <DependentUpon>ToursWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="BasketWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

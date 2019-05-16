@@ -15,7 +15,7 @@
         <Border Background="White" Margin="20" CornerRadius="10">
             <StackPanel>
                 <Button Style="{StaticResource ImageButtonStyle}" Click="ImageButton_Click">
-                    <Image Source="Icons/exit.png" Height="32" HorizontalAlignment="Right"/>
+                    <Image Source="Icons/Home.png" Height="32" HorizontalAlignment="Right"/>
                 </Button>
                 <TextBlock Foreground="#FF465574" TextAlignment="Center" Margin="0,50,0,0" FontSize="32">Автобусы</TextBlock>
                 <TextBlock Foreground="#FF465574" Margin="10,30,10,0" FontSize="18">Откуда</TextBlock>
@@ -25,6 +25,7 @@
                 <TextBlock Foreground="#FF465574" Margin="10,30,10,0" FontSize="18">Дата поездки</TextBlock>
                 <Calendar x:Name="calTxt" HorizontalAlignment="left" Margin="10,10,10,0"/>
                 <Button Height="50" Margin="10,30,10,0" FontSize="18" Background="#FF465574" Foreground="White" Click="Search_Click">Подобрать</Button>
+                
             </StackPanel>
         </Border>
     </Grid>
