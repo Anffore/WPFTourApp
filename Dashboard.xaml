@@ -24,7 +24,7 @@
                     <TextBlock x:Name="UserRole" Margin="20,5,20,10" HorizontalAlignment="Center">Role</TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="0" Grid.Row="1">
-                    <Button Margin="20, 10, 20, 10" Height="30" FontSize="16" Background="#FF465574" Foreground="White">Все туры</Button>
+                    <Button Margin="20, 10, 20, 10" Height="30" FontSize="16" Background="#FF465574" Foreground="White" Click="ShowAllTour_Click">Все туры</Button>
                     <Button Margin="20, 10, 20, 10" Height="30" FontSize="16" Background="#FF465574" Foreground="White" Click="SearchTour_Click">Подобрать</Button>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="0">

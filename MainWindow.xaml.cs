@@ -29,7 +29,6 @@ namespace WPFTourApp
                 ToursWindow tourWindow = new ToursWindow();
                 tourWindow.dataGridTour.ItemsSource = tours.ToList<Tour>();
                 tourWindow.ShowDialog();
-                this.Show();
             }
             else
             {

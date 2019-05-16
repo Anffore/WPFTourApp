@@ -36,7 +36,8 @@ namespace WPFTourApp
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-
+            Dashboard newDashboard = new Dashboard();
+            newDashboard.Show();
         }
 
         private void DeleteFromBasket(object sender, RoutedEventArgs e)

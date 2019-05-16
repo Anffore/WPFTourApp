@@ -41,5 +41,12 @@ namespace WPFTourApp
         {
             App.Current.Shutdown();
         }
+
+        private void ShowAllTour_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            AllTourWindow allTourWindow = new AllTourWindow();
+            allTourWindow.ShowDialog();
+        }
     }
 }
