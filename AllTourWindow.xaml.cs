@@ -27,7 +27,11 @@ namespace WPFTourApp
 
             allDataGridTour.ItemsSource = db.Tours.ToList();
         }
-
+        /// <summary>
+        /// Вернуться на главную
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -36,6 +40,11 @@ namespace WPFTourApp
 
         }
 
+        /// <summary>
+        /// Перейти в корзину
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BasketButton_Click(object sender, RoutedEventArgs e)
         {
             BasketWindow basketWindow = new BasketWindow();
@@ -43,12 +52,17 @@ namespace WPFTourApp
             basketWindow.ShowDialog();
         }
 
+        /// <summary>
+        /// Добавить в корзину
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddToBasket_Click(object sender, RoutedEventArgs e)
         {
             //получаем выбранный элемент в DataGrid типа Tour
             Tour selectedTour = allDataGridTour.SelectedItem as Tour;
 
-            //Создаем корзину и пихаем в неё значения из DataGrid
+            //Создаем корзину и передаем в неё значения из DataGrid
             Basket basket = new Basket();
             basket.TovarId = selectedTour.Id;
             basket.Price = selectedTour.Price;

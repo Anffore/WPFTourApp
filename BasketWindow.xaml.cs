@@ -32,7 +32,11 @@ namespace WPFTourApp
             
         }
 
-
+        /// <summary>
+        /// Вернуться на главную
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -40,6 +44,11 @@ namespace WPFTourApp
             newDashboard.Show();
         }
 
+        /// <summary>
+        /// Удаление из корзины
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteFromBasket(object sender, RoutedEventArgs e)
         {
             //Выбираем объект в строке

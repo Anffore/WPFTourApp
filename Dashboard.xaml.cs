@@ -23,6 +23,11 @@ namespace WPFTourApp
             InitializeComponent();       
         }
 
+        /// <summary>
+        /// Присваиваем текстовым полям значения текущего пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             UserName.Text = LoginWindow.nameUser;
@@ -30,6 +35,11 @@ namespace WPFTourApp
             UserRole.Text = LoginWindow.roleUser;
         }
 
+        /// <summary>
+        /// Переход на форму поиска
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SearchTour_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -37,11 +47,21 @@ namespace WPFTourApp
             mainWindow.ShowDialog();
         }
 
+        /// <summary>
+        /// Выход из приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             App.Current.Shutdown();
         }
 
+        /// <summary>
+        /// Переход на форму всех туров
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ShowAllTour_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
